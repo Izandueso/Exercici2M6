@@ -7,7 +7,7 @@ public class Exercici2 {
 		//Camp variable tipus Comarca
 		Cotxes cotxe;
 		//Declaració del fitxer
-		File fitxer = new File("/home/user/Escriptori/comarquesObject.txt");
+		File fitxer = new File("F:/comarquesObject.txt");
 		//Crea el flux de sortida
 		FileOutputStream fileout = new FileOutputStream(fitxer);
 		FileInputStream filein = new FileInputStream(fitxer);
@@ -27,13 +27,13 @@ public class Exercici2 {
 		}
 		
 		try {
+			
 			while (true){//Llegeix el fitxer
-				//Llegeix la comarca
 				
 				cotxe = (Cotxes) dataInComarq.readObject();
 				System.out.println("Marca del cotxe: " +cotxe.getMarca()+
-						" Anys"+ cotxe.getAnys() + "Model: " + cotxe.getModel() +
-						"Matricula: " + cotxe.getMatricula());
+						" Anys: "+ cotxe.getAnys() + " Model: " + cotxe.getModel() +
+						" Matricula: " + cotxe.getMatricula());
 				
 			}
 			
